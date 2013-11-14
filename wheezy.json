@@ -20,7 +20,7 @@
       " locale=en_US.UTF-8",
       " keymap=dk",
       " netcfg/get_hostname=vagrant",
-      " netcfg/get_domain=vm ",
+      " netcfg/get_domain=vagrantup.com ",
       "<enter>"
     ],
     "shutdown_command": "echo 'vagrant'|sudo -S shutdown -h now",
@@ -53,7 +53,7 @@
       " locale=en_US.UTF-8",
       " keymap=dk",
       " netcfg/get_hostname=vagrant",
-      " netcfg/get_domain=vm ",
+      " netcfg/get_domain=vagrantup.com ",
       "<enter>"
     ],
     "shutdown_command": "echo 'vagrant'|sudo -S shutdown -h now",
