@@ -6,3 +6,5 @@ iso
 crash.log
 tmp
 .DS_Store
+virtualbox
+vmware
