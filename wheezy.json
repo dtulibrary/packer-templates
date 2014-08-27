@@ -4,7 +4,7 @@
     "type": "vmware",
     "guest_os_type": "debian6-64",
     "http_directory": "http",
-    "iso_url": "http://vagrant.cvt.dk/debian-7.2.0-amd64-netinst.iso",
+    "iso_url": "http://vagrant.cvt.dk/debian-7.6.0-amd64-netinst.iso",
     "iso_checksum": "b86774fe4de88be6378ba3d71b8029bd",
     "iso_checksum_type": "md5",
     "ssh_username": "vagrant",
@@ -35,7 +35,7 @@
     "vm_name": "debian72",
     "type": "virtualbox",
     "http_directory": "http",
-    "iso_url": "http://vagrant.cvt.dk/debian-7.2.0-amd64-netinst.iso",
+    "iso_url": "http://vagrant.cvt.dk/debian-7.6.0-amd64-netinst.iso",
     "iso_checksum": "b86774fe4de88be6378ba3d71b8029bd",
     "iso_checksum_type": "md5",
     "guest_os_type": "Debian_64",
@@ -84,6 +84,6 @@
   "post-processors": [{
     "type": "vagrant",
     "keep_input_artifact": false,
-    "output": "./{{.Provider}}/debian72.box"
+    "output": "./{{.Provider}}/debian76.box"
   }]
 }
