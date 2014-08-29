@@ -26,3 +26,4 @@ chown -R vagrant:vagrant /home/vagrant/.ssh
 #fix stuff
 sed -i '/UsePAM/aUseDNS no' /etc/ssh/sshd_config
 sed -i '/env_reset/aDefaults        env_keep += "SSH_AUTH_SOCK"' /etc/sudoers;
+adduser vagrant adm
