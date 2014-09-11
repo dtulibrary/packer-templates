@@ -5,7 +5,7 @@
         "<esc><wait>",
         "install",
         " auto",
-        " preseed/url=http://{{ .HTTPIP }}:{{ .HTTPPort }}/vagrant-wheezy.txt",
+        " preseed/url=http://{{ .HTTPIP }}:{{ .HTTPPort }}/vagrant-jessie.txt",
         " debian-installer=en_US",
         " locale=en_US.UTF-8",
         " keymap=dk",
@@ -16,16 +16,16 @@
       "disk_size": 10140,
       "guest_os_type": "debian6-64",
       "http_directory": "http",
-      "iso_checksum": "8a3c2ad7fd7a9c4c7e9bcb5cae38c135",
+      "iso_checksum": "8a386a16ab2939e00bfd5efa27007216",
       "iso_checksum_type": "md5",
-      "iso_url": "http://ftp.dk.debian.org/debian-cd/7.6.0/amd64/iso-cd/debian-7.6.0-amd64-netinst.iso",
+      "iso_url": "http://cdimage.debian.org/cdimage/jessie_di_beta_1/amd64/iso-cd/debian-jessie-DI-b1-amd64-netinst.iso",
       "shutdown_command": "echo 'vagrant'|sudo -S shutdown -h now",
       "ssh_password": "vagrant",
-      "ssh_username": "root",
+      "ssh_username": "vagrant",
       "ssh_wait_timeout": "10000s",
       "tools_upload_flavor": "linux",
       "type": "vmware-iso",
-      "vm_name": "debian76",
+      "vm_name": "debian-jessie",
       "vmx_data": {
         "cpuid.coresPerSocket": "1",
         "memsize": "1024",
@@ -37,7 +37,7 @@
         "<esc><wait>",
         "install",
         " auto",
-        " preseed/url=http://{{ .HTTPIP }}:{{ .HTTPPort }}/vagrant-wheezy.txt",
+        " preseed/url=http://{{ .HTTPIP }}:{{ .HTTPPort }}/vagrant-jessie.txt",
         " debian-installer=en_US",
         " locale=en_US.UTF-8",
         " keymap=dk",
@@ -49,12 +49,12 @@
       "guest_additions_path": "/var/tmp/VBoxGuestAdditions_{{.Version}}.iso",
       "guest_os_type": "Debian_64",
       "http_directory": "http",
-      "iso_checksum": "8a3c2ad7fd7a9c4c7e9bcb5cae38c135",
+      "iso_checksum": "8a386a16ab2939e00bfd5efa27007216",
       "iso_checksum_type": "md5",
-      "iso_url": "http://ftp.dk.debian.org/debian-cd/7.6.0/amd64/iso-cd/debian-7.6.0-amd64-netinst.iso",
+      "iso_url": "http://cdimage.debian.org/cdimage/jessie_di_beta_1/amd64/iso-cd/debian-jessie-DI-b1-amd64-netinst.iso",
       "shutdown_command": "echo 'vagrant'|sudo -S shutdown -h now",
       "ssh_password": "vagrant",
-      "ssh_username": "root",
+      "ssh_username": "vagrant",
       "ssh_wait_timeout": "10000s",
       "type": "virtualbox-iso",
       "vboxmanage": [
@@ -72,13 +72,13 @@
         ]
       ],
       "virtualbox_version_file": "/var/tmp/.vbox_version",
-      "vm_name": "debian76"
+      "vm_name": "debian-jessie"
     }
   ],
   "post-processors": [
     {
       "keep_input_artifact": false,
-      "output": "./{{.Provider}}/debian76.box",
+      "output": "./{{.Provider}}/debian-jessie.box",
       "type": "vagrant"
     }
   ],

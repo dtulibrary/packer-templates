@@ -2,7 +2,7 @@
 
 if [ $PACKER_BUILDER_TYPE == 'vmware-iso' ]; then
     echo "Installing VMware Tools"
-    apt-get install -y linux-headers-$(uname -r) build-essential perl gcc
+    apt-get install -y linux-headers-$(uname -r) build-essential perl gcc fuse
 
     cd /tmp
     mkdir -p /mnt/cdrom
@@ -21,9 +21,10 @@ elif [ $PACKER_BUILDER_TYPE == 'virtualbox-iso' ]; then
     apt-get install -y linux-headers-$(uname -r) build-essential perl
     apt-get install -y dkms
 
-    VBOX_VERSION=$(cat /root/.vbox_version)
-    mount -o loop /root/VBoxGuestAdditions_${VBOX_VERSION}.iso /mnt
+    VBOX_VERSION=$(cat /var/tmp/.vbox_version)
+    modprobe loop
+    mount -o loop /var/tmp/VBoxGuestAdditions_${VBOX_VERSION}.iso /mnt
     sh /mnt/VBoxLinuxAdditions.run --nox11
     umount /mnt
-    rm /root/VBoxGuestAdditions_${VBOX_VERSION}.iso
+    rm /var/tmp/VBoxGuestAdditions_${VBOX_VERSION}.iso
 fi
