@@ -24,6 +24,7 @@
       "ssh_username": "root",
       "ssh_wait_timeout": "10000s",
       "tools_upload_flavor": "linux",
+      "tools_upload_path": "/var/tmp/linux.iso",
       "type": "vmware-iso",
       "vm_name": "debian76",
       "vmx_data": {
