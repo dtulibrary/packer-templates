@@ -4,7 +4,7 @@ if [ $PACKER_BUILDER_TYPE == 'vmware-iso' ]; then
     echo "Installing VMware Tools"
 
     mkdir -p /mnt/hgfs
-    apt-get update
+    apt-get update -y
     apt-get install -y open-vm-tools module-assistant linux-headers-amd64 linux-image-amd64 open-vm-tools-dkms
     module-assistant prepare
     module-assistant --text-mode -f get open-vm-tools-dkms
